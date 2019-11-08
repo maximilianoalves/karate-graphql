@@ -1,0 +1,26 @@
+{
+  "data": {
+    "pokemon":{
+      "id":"#string",
+      "number":"#string",
+      "name":"#string",
+      "attacks": {
+        "special": [
+          {
+            "name":"#string",
+            "type":"#string",
+            "damage":"#number"
+          }, {
+            "name":"#string",
+            "type":"#string",
+            "damage":"#number"
+          }, {
+            "name":"#string",
+            "type":"#string",
+            "damage":"#number"
+          }
+        ]
+      }
+    }
+  }
+}

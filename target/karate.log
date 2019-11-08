@@ -1,0 +1,514 @@
+16:52:52.685 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:52:52.999 [main] DEBUG com.intuit.karate - request:
+1 > POST https://graphql-pokemon.now.sh/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 299
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: graphql-pokemon.now.sh
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+{"query":"query PokemonAndAttacks($name: String) {\n    pokemon(name: $name) {\n        id\n        number\n        name\n        attacks {\n            special {\n                name\n                type\n                damage\n            }\n        }\n    }\n}","variables":{"name":"Pikachu"}}
+
+16:52:57.222 [main] DEBUG com.intuit.karate - response time in milliseconds: 4221,91
+1 < 200
+1 < Accept-Ranges: bytes
+1 < Access-Control-Allow-Methods: GET,HEAD,PUT,POST,DELETE
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 256
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Fri, 08 Nov 2019 18:52:57 GMT
+1 < X-Now-Instance: 2775261464
+1 < cache-control: s-maxage=0
+1 < server: now
+1 < strict-transport-security: max-age=63072000
+1 < x-now-id: gru1:mw4xf-1573239176412-0845de9e65a1
+1 < x-now-trace: gru1,sfo1
+{"data":{"pokemon":{"id":"UG9rZW1vbjowMjU=","number":"025","name":"Pikachu","attacks":{"special":[{"name":"Discharge","type":"Electric","damage":35},{"name":"Thunder","type":"Electric","damage":100},{"name":"Thunderbolt","type":"Electric","damage":55}]}}}}
+
+16:52:57.225 [main] INFO  com.intuit.karate - [print] {
+  "data": {
+    "pokemon": {
+      "id": "UG9rZW1vbjowMjU=",
+      "number": "025",
+      "name": "Pikachu",
+      "attacks": {
+        "special": [
+          {
+            "name": "Discharge",
+            "type": "Electric",
+            "damage": 35
+          },
+          {
+            "name": "Thunder",
+            "type": "Electric",
+            "damage": 100
+          },
+          {
+            "name": "Thunderbolt",
+            "type": "Electric",
+            "damage": 55
+          }
+        ]
+      }
+    }
+  }
+}
+
+16:52:57.226 [main] INFO  com.intuit.karate - [print] {
+  "data": {
+    "pokemon": {
+      "id": "#string",
+      "number": "#string",
+      "name": "#string",
+      "attacks": {
+        "special": [
+          {
+            "name": "#string",
+            "type": "#string",
+            "damage": "#number"
+          },
+          {
+            "name": "#string",
+            "type": "#string",
+            "damage": "#number"
+          },
+          {
+            "name": "#string",
+            "type": "#string",
+            "damage": "#number"
+          }
+        ]
+      }
+    }
+  }
+}
+
+16:54:13.612 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:54:13.934 [main] DEBUG com.intuit.karate - request:
+1 > POST https://graphql-pokemon.now.sh/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 299
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: graphql-pokemon.now.sh
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+{"query":"query PokemonAndAttacks($name: String) {\n    pokemon(name: $name) {\n        id\n        number\n        name\n        attacks {\n            special {\n                name\n                type\n                damage\n            }\n        }\n    }\n}","variables":{"name":"Pikachu"}}
+
+16:54:17.689 [main] DEBUG com.intuit.karate - response time in milliseconds: 3754,09
+1 < 200
+1 < Accept-Ranges: bytes
+1 < Access-Control-Allow-Methods: GET,HEAD,PUT,POST,DELETE
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 256
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Fri, 08 Nov 2019 18:54:17 GMT
+1 < X-Now-Instance: 2775261464
+1 < cache-control: s-maxage=0
+1 < server: now
+1 < strict-transport-security: max-age=63072000
+1 < x-now-id: gru1:lz9jp-1573239256894-30ee9e37328c
+1 < x-now-trace: gru1,sfo1
+{"data":{"pokemon":{"id":"UG9rZW1vbjowMjU=","number":"025","name":"Pikachu","attacks":{"special":[{"name":"Discharge","type":"Electric","damage":35},{"name":"Thunder","type":"Electric","damage":100},{"name":"Thunderbolt","type":"Electric","damage":55}]}}}}
+
+16:54:17.693 [main] INFO  com.intuit.karate - [print] {
+  "data": {
+    "pokemon": {
+      "id": "UG9rZW1vbjowMjU=",
+      "number": "025",
+      "name": "Pikachu",
+      "attacks": {
+        "special": [
+          {
+            "name": "Discharge",
+            "type": "Electric",
+            "damage": 35
+          },
+          {
+            "name": "Thunder",
+            "type": "Electric",
+            "damage": 100
+          },
+          {
+            "name": "Thunderbolt",
+            "type": "Electric",
+            "damage": 55
+          }
+        ]
+      }
+    }
+  }
+}
+
+16:54:17.694 [main] INFO  com.intuit.karate - [print] {
+  "data": {
+    "pokemon": {
+      "id": "#string",
+      "number": "#string",
+      "name": "#string",
+      "attacks": {
+        "special": [
+          {
+            "name": "#string",
+            "type": "#string",
+            "damage": "#number"
+          },
+          {
+            "name": "#string",
+            "type": "#string",
+            "damage": "#number"
+          },
+          {
+            "name": "#string",
+            "type": "#string",
+            "damage": "#number"
+          }
+        ]
+      }
+    }
+  }
+}
+
+16:54:23.088 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:54:23.376 [main] DEBUG com.intuit.karate - request:
+1 > POST https://graphql-pokemon.now.sh/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 175
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: graphql-pokemon.now.sh
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+{"query":"{\n  pokemon(name: \"Pikachu\") {\n    id\n    number\n    name\n    attacks {\n      special {\n        name\n        type\n        damage\n      }\n    }\n  }\n}"}
+
+16:54:28.161 [main] DEBUG com.intuit.karate - response time in milliseconds: 4783,59
+1 < 200
+1 < Accept-Ranges: bytes
+1 < Access-Control-Allow-Methods: GET,HEAD,PUT,POST,DELETE
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 256
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Fri, 08 Nov 2019 18:54:28 GMT
+1 < X-Now-Instance: 2775261464
+1 < cache-control: s-maxage=0
+1 < server: now
+1 < strict-transport-security: max-age=63072000
+1 < x-now-id: gru1:7mrbw-1573239267369-8c98fe9d06d0
+1 < x-now-trace: gru1,sfo1
+{"data":{"pokemon":{"id":"UG9rZW1vbjowMjU=","number":"025","name":"Pikachu","attacks":{"special":[{"name":"Discharge","type":"Electric","damage":35},{"name":"Thunder","type":"Electric","damage":100},{"name":"Thunderbolt","type":"Electric","damage":55}]}}}}
+
+16:54:28.190 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:54:28.209 [main] DEBUG com.intuit.karate - request:
+1 > POST https://graphql-pokemon.now.sh/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 299
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: graphql-pokemon.now.sh
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+{"query":"query PokemonAndAttacks($name: String) {\n    pokemon(name: $name) {\n        id\n        number\n        name\n        attacks {\n            special {\n                name\n                type\n                damage\n            }\n        }\n    }\n}","variables":{"name":"Pikachu"}}
+
+16:54:29.121 [main] DEBUG com.intuit.karate - response time in milliseconds: 911,25
+1 < 200
+1 < Accept-Ranges: bytes
+1 < Access-Control-Allow-Methods: GET,HEAD,PUT,POST,DELETE
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 256
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Fri, 08 Nov 2019 18:54:29 GMT
+1 < X-Now-Instance: 2775261464
+1 < cache-control: s-maxage=0
+1 < server: now
+1 < strict-transport-security: max-age=63072000
+1 < x-now-id: gru1:lz9jp-1573239268358-b7ba7706a7f5
+1 < x-now-trace: gru1,sfo1
+{"data":{"pokemon":{"id":"UG9rZW1vbjowMjU=","number":"025","name":"Pikachu","attacks":{"special":[{"name":"Discharge","type":"Electric","damage":35},{"name":"Thunder","type":"Electric","damage":100},{"name":"Thunderbolt","type":"Electric","damage":55}]}}}}
+
+16:54:29.132 [main] INFO  com.intuit.karate - [print] response: {
+  "data": {
+    "pokemon": {
+      "id": "UG9rZW1vbjowMjU=",
+      "number": "025",
+      "name": "Pikachu",
+      "attacks": {
+        "special": [
+          {
+            "name": "Discharge",
+            "type": "Electric",
+            "damage": 35
+          },
+          {
+            "name": "Thunder",
+            "type": "Electric",
+            "damage": 100
+          },
+          {
+            "name": "Thunderbolt",
+            "type": "Electric",
+            "damage": 55
+          }
+        ]
+      }
+    }
+  }
+}
+
+16:54:29.149 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:54:29.155 [main] DEBUG com.intuit.karate - request:
+1 > POST https://graphql-pokemon.now.sh/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 302
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: graphql-pokemon.now.sh
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+{"query":"query PokemonAndAttacks($name: String) {\n    pokemon(name: $name) {\n        id\n        number\n        name\n        attacks {\n            special {\n                name\n                type\n                damage\n            }\n        }\n    }\n}","variables":{"name":"Charmander"}}
+
+16:54:30.303 [main] DEBUG com.intuit.karate - response time in milliseconds: 1147,18
+1 < 200
+1 < Accept-Ranges: bytes
+1 < Access-Control-Allow-Methods: GET,HEAD,PUT,POST,DELETE
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 254
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Fri, 08 Nov 2019 18:54:30 GMT
+1 < X-Now-Instance: 2775261464
+1 < cache-control: s-maxage=0
+1 < server: now
+1 < strict-transport-security: max-age=63072000
+1 < x-now-id: gru1:lz9jp-1573239269279-abd3749f805c
+1 < x-now-trace: gru1,sfo1
+{"data":{"pokemon":{"id":"UG9rZW1vbjowMDQ=","number":"004","name":"Charmander","attacks":{"special":[{"name":"Flame Burst","type":"Fire","damage":30},{"name":"Flame Charge","type":"Fire","damage":25},{"name":"Flamethrower","type":"Fire","damage":55}]}}}}
+
+16:54:30.308 [main] INFO  com.intuit.karate - [print] response: {
+  "data": {
+    "pokemon": {
+      "id": "UG9rZW1vbjowMDQ=",
+      "number": "004",
+      "name": "Charmander",
+      "attacks": {
+        "special": [
+          {
+            "name": "Flame Burst",
+            "type": "Fire",
+            "damage": 30
+          },
+          {
+            "name": "Flame Charge",
+            "type": "Fire",
+            "damage": 25
+          },
+          {
+            "name": "Flamethrower",
+            "type": "Fire",
+            "damage": 55
+          }
+        ]
+      }
+    }
+  }
+}
+
+16:54:30.326 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:54:30.332 [main] DEBUG com.intuit.karate - request:
+1 > POST https://graphql-pokemon.now.sh/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 300
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: graphql-pokemon.now.sh
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+{"query":"query PokemonAndAttacks($name: String) {\n    pokemon(name: $name) {\n        id\n        number\n        name\n        attacks {\n            special {\n                name\n                type\n                damage\n            }\n        }\n    }\n}","variables":{"name":"Squirtle"}}
+
+16:54:31.456 [main] DEBUG com.intuit.karate - response time in milliseconds: 1123,57
+1 < 200
+1 < Accept-Ranges: bytes
+1 < Access-Control-Allow-Methods: GET,HEAD,PUT,POST,DELETE
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 248
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Fri, 08 Nov 2019 18:54:31 GMT
+1 < X-Now-Instance: 2775261464
+1 < cache-control: s-maxage=0
+1 < server: now
+1 < strict-transport-security: max-age=63072000
+1 < x-now-id: gru1:mw4xf-1573239270460-8844dbc05c04
+1 < x-now-trace: gru1,sfo1
+{"data":{"pokemon":{"id":"UG9rZW1vbjowMDc=","number":"007","name":"Squirtle","attacks":{"special":[{"name":"Aqua Jet","type":"Water","damage":25},{"name":"Aqua Tail","type":"Water","damage":45},{"name":"Water Pulse","type":"Water","damage":35}]}}}}
+
+16:54:31.467 [main] INFO  com.intuit.karate - [print] response: {
+  "data": {
+    "pokemon": {
+      "id": "UG9rZW1vbjowMDc=",
+      "number": "007",
+      "name": "Squirtle",
+      "attacks": {
+        "special": [
+          {
+            "name": "Aqua Jet",
+            "type": "Water",
+            "damage": 25
+          },
+          {
+            "name": "Aqua Tail",
+            "type": "Water",
+            "damage": 45
+          },
+          {
+            "name": "Water Pulse",
+            "type": "Water",
+            "damage": 35
+          }
+        ]
+      }
+    }
+  }
+}
+
+16:54:31.486 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:54:31.499 [main] DEBUG com.intuit.karate - request:
+1 > POST https://graphql-pokemon.now.sh/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 301
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: graphql-pokemon.now.sh
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+{"query":"query PokemonAndAttacks($name: String) {\n    pokemon(name: $name) {\n        id\n        number\n        name\n        attacks {\n            special {\n                name\n                type\n                damage\n            }\n        }\n    }\n}","variables":{"name":"Charizard"}}
+
+16:54:32.481 [main] DEBUG com.intuit.karate - response time in milliseconds: 980,66
+1 < 200
+1 < Accept-Ranges: bytes
+1 < Access-Control-Allow-Methods: GET,HEAD,PUT,POST,DELETE
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 254
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Fri, 08 Nov 2019 18:54:32 GMT
+1 < X-Now-Instance: 2775261464
+1 < cache-control: s-maxage=0
+1 < server: now
+1 < strict-transport-security: max-age=63072000
+1 < x-now-id: gru1:7mrbw-1573239271622-40ced1e6e1a5
+1 < x-now-trace: gru1,sfo1
+{"data":{"pokemon":{"id":"UG9rZW1vbjowMDY=","number":"006","name":"Charizard","attacks":{"special":[{"name":"Dragon Claw","type":"Dragon","damage":35},{"name":"Fire Blast","type":"Fire","damage":100},{"name":"Flamethrower","type":"Fire","damage":55}]}}}}
+
+16:54:32.486 [main] INFO  com.intuit.karate - [print] response: {
+  "data": {
+    "pokemon": {
+      "id": "UG9rZW1vbjowMDY=",
+      "number": "006",
+      "name": "Charizard",
+      "attacks": {
+        "special": [
+          {
+            "name": "Dragon Claw",
+            "type": "Dragon",
+            "damage": 35
+          },
+          {
+            "name": "Fire Blast",
+            "type": "Fire",
+            "damage": 100
+          },
+          {
+            "name": "Flamethrower",
+            "type": "Fire",
+            "damage": 55
+          }
+        ]
+      }
+    }
+  }
+}
+
+16:54:32.503 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:54:32.514 [main] DEBUG com.intuit.karate - request:
+1 > POST https://graphql-pokemon.now.sh/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 299
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: graphql-pokemon.now.sh
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+{"query":"query PokemonAndAttacks($name: String) {\n    pokemon(name: $name) {\n        id\n        number\n        name\n        attacks {\n            special {\n                name\n                type\n                damage\n            }\n        }\n    }\n}","variables":{"name":"Pikachu"}}
+
+16:54:33.507 [main] DEBUG com.intuit.karate - response time in milliseconds: 992,29
+1 < 200
+1 < Accept-Ranges: bytes
+1 < Access-Control-Allow-Methods: GET,HEAD,PUT,POST,DELETE
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 256
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Fri, 08 Nov 2019 18:54:33 GMT
+1 < X-Now-Instance: 2775261464
+1 < cache-control: s-maxage=0
+1 < server: now
+1 < strict-transport-security: max-age=63072000
+1 < x-now-id: gru1:mw4xf-1573239272645-39e5a23541fb
+1 < x-now-trace: gru1,sfo1
+{"data":{"pokemon":{"id":"UG9rZW1vbjowMjU=","number":"025","name":"Pikachu","attacks":{"special":[{"name":"Discharge","type":"Electric","damage":35},{"name":"Thunder","type":"Electric","damage":100},{"name":"Thunderbolt","type":"Electric","damage":55}]}}}}
+
+16:54:33.511 [main] INFO  com.intuit.karate - [print] {
+  "data": {
+    "pokemon": {
+      "id": "UG9rZW1vbjowMjU=",
+      "number": "025",
+      "name": "Pikachu",
+      "attacks": {
+        "special": [
+          {
+            "name": "Discharge",
+            "type": "Electric",
+            "damage": 35
+          },
+          {
+            "name": "Thunder",
+            "type": "Electric",
+            "damage": 100
+          },
+          {
+            "name": "Thunderbolt",
+            "type": "Electric",
+            "damage": 55
+          }
+        ]
+      }
+    }
+  }
+}
+
+16:54:33.512 [main] INFO  com.intuit.karate - [print] {
+  "data": {
+    "pokemon": {
+      "id": "#string",
+      "number": "#string",
+      "name": "#string",
+      "attacks": {
+        "special": [
+          {
+            "name": "#string",
+            "type": "#string",
+            "damage": "#number"
+          },
+          {
+            "name": "#string",
+            "type": "#string",
+            "damage": "#number"
+          },
+          {
+            "name": "#string",
+            "type": "#string",
+            "damage": "#number"
+          }
+        ]
+      }
+    }
+  }
+}
+

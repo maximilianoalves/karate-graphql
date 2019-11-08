@@ -1,0 +1,87 @@
+16:54:32.503 karate.env system property was: null 
+16:54:32.514 request:
+1 > POST https://graphql-pokemon.now.sh/graphql
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 299
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: graphql-pokemon.now.sh
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_212)
+{"query":"query PokemonAndAttacks($name: String) {\n    pokemon(name: $name) {\n        id\n        number\n        name\n        attacks {\n            special {\n                name\n                type\n                damage\n            }\n        }\n    }\n}","variables":{"name":"Pikachu"}}
+
+16:54:33.507 response time in milliseconds: 992,29
+1 < 200
+1 < Accept-Ranges: bytes
+1 < Access-Control-Allow-Methods: GET,HEAD,PUT,POST,DELETE
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 256
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Fri, 08 Nov 2019 18:54:33 GMT
+1 < X-Now-Instance: 2775261464
+1 < cache-control: s-maxage=0
+1 < server: now
+1 < strict-transport-security: max-age=63072000
+1 < x-now-id: gru1:mw4xf-1573239272645-39e5a23541fb
+1 < x-now-trace: gru1,sfo1
+{"data":{"pokemon":{"id":"UG9rZW1vbjowMjU=","number":"025","name":"Pikachu","attacks":{"special":[{"name":"Discharge","type":"Electric","damage":35},{"name":"Thunder","type":"Electric","damage":100},{"name":"Thunderbolt","type":"Electric","damage":55}]}}}}
+
+16:54:33.511 [print] {
+  "data": {
+    "pokemon": {
+      "id": "UG9rZW1vbjowMjU=",
+      "number": "025",
+      "name": "Pikachu",
+      "attacks": {
+        "special": [
+          {
+            "name": "Discharge",
+            "type": "Electric",
+            "damage": 35
+          },
+          {
+            "name": "Thunder",
+            "type": "Electric",
+            "damage": 100
+          },
+          {
+            "name": "Thunderbolt",
+            "type": "Electric",
+            "damage": 55
+          }
+        ]
+      }
+    }
+  }
+}
+
+16:54:33.512 [print] {
+  "data": {
+    "pokemon": {
+      "id": "#string",
+      "number": "#string",
+      "name": "#string",
+      "attacks": {
+        "special": [
+          {
+            "name": "#string",
+            "type": "#string",
+            "damage": "#number"
+          },
+          {
+            "name": "#string",
+            "type": "#string",
+            "damage": "#number"
+          },
+          {
+            "name": "#string",
+            "type": "#string",
+            "damage": "#number"
+          }
+        ]
+      }
+    }
+  }
+}
+
+
