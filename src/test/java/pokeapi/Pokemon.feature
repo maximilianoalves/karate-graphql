@@ -4,6 +4,8 @@ Background:
 
   * url "https://graphql-pokemon.now.sh/graphql"
   * def pokemon_contract = read('pokemon-contract.json')
+  * def PokemonFaker = Java.type('pokeapi.java.PokemonFaker')
+
 
   @pokemon @pokemon_scenario
   Scenario: Validar o pokemon Pikachu
@@ -56,3 +58,13 @@ Background:
     And match response == pokemon_contract
     * print response
     * print pokemon_contract
+
+  @pokemon @pokemon_javafaker
+  Scenario: Validar pokemon com retorno aleatório
+    * def pokemonName = PokemonFaker.name()
+    Given def query = read('by-name.graphql')
+    And def variables = { name: '#(pokemonName)' }
+    And request { query: '#(query)', variables: '#(variables)' }
+    When method post
+    Then status 200
+    And match $.data.pokemon.name == pokemonName
