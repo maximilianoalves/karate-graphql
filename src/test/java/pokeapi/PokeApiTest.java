@@ -11,5 +11,4 @@ public class PokeApiTest extends BaseRunner {
     public void test(){
         testParallel(getClass(), 3);
     }
-
 }
