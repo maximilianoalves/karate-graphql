@@ -1,11 +1,15 @@
 package pokeapi;
 
-import org.junit.runner.RunWith;
-import com.intuit.karate.junit4.Karate;
-import cucumber.api.CucumberOptions;
+import com.intuit.karate.KarateOptions;
+import org.junit.Test;
+import pokeapi.java.BaseRunner;
 
-@RunWith(Karate.class)
-@CucumberOptions(tags = "@pokemon")
-public class PokeApiTest {
+@KarateOptions(tags = "@pokemon")
+public class PokeApiTest extends BaseRunner {
+
+    @Test
+    public void test(){
+        testParallel(getClass(), 3);
+    }
 
 }

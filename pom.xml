@@ -14,6 +14,7 @@
         <maven.compiler.version>3.6.0</maven.compiler.version>
         <karate.version>0.9.4</karate.version>
         <gatling.plugin.version>2.2.4</gatling.plugin.version>
+        <cucumber.reporting.version>3.8.0</cucumber.reporting.version>
     </properties>
 
     <dependencies>
@@ -39,6 +40,20 @@
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
             <version>1.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- responsible for the cucumber html report -->
+        <dependency>
+            <groupId>net.masterthought</groupId>
+            <artifactId>cucumber-reporting</artifactId>
+            <version>${cucumber.reporting.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
