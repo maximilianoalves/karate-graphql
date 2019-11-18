@@ -1,0 +1,5 @@
+query PokemonAndAttacks($id: String) {
+    pokemon(id: $id) {
+        name
+    }
+}

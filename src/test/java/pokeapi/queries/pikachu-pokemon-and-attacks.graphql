@@ -1,5 +1,5 @@
-query PokemonAndAttacks($name: String) {
-    pokemon(name: $name) {
+{
+    pokemon(name: "Pikachu") {
         id
         number
         name
