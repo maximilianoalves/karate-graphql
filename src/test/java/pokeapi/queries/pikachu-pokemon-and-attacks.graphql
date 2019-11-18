@@ -1,0 +1,14 @@
+{
+    pokemon(name: "Pikachu") {
+        id
+        number
+        name
+        attacks {
+            special {
+                name
+                type
+                damage
+            }
+        }
+    }
+}
