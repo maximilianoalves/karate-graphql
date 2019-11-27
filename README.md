@@ -32,10 +32,16 @@ Projeto de exemplo para implementação de testes para API's GraphQL utilizando 
 │           │   ├── java
 │           │   │   ├── BaseRunner.java
 │           │   │   └── PokemonFaker.java
+|           |   ├── queries
+|           |   |   ├── charmander-pokemon-only-name.graphql
+|           |   |   ├── pikachu-pokemon-and-attacks.graphql
+|           |   |   ├── pokemon-and-attacks-by-name.graphql
+|           |   |   ├── pokemon-full-data.graphql
+│           │   │   └── pokemon-only-name-by-id.graphql
 │           │   ├── PokeApiTest.java
 │           │   ├── Pokemon.feature
-│           │   ├── by-name.graphql
-│           │   └── pokemon-contract.json
+│           │   ├── pokemon-contract.json
+│           │   └── pokemon-full-data-contract.json
 │           ├── karate-config.js
 │           └── logback-test.xml
 ├── README.md
@@ -43,13 +49,13 @@ Projeto de exemplo para implementação de testes para API's GraphQL utilizando 
 
 ```
 
-Considerando este contexto, onde o objetivo é testar uma API GraphQL, os principais arquivos são: Pokemon.feature e by-name.graphql. 
+Considerando este contexto, onde o objetivo é testar uma API GraphQL, os principais arquivos e pacotes são: Pokemon.feature e queries (onde encontramos todas as consultas). 
 
 No arquivo Pokemon.feature temos a implementação dos testes, assim como as devidas validações de status, contrato e regras de negócio. Veja um exemplo:
 
 ```
   Scenario Outline: Validar pokemon <pokemon_nome>
-    Given def query = read('by-name.graphql')
+    iven def query = read('classpath:pokeapi/queries/pokemon-and-attacks-by-name.graphql')
     And def variables = { name: '<pokemon_nome>' }
     And request { query: '#(query)', variables: '#(variables)' }
     When method post
@@ -66,7 +72,7 @@ No arquivo Pokemon.feature temos a implementação dos testes, assim como as dev
 
 ```
 
-Como visto no exemplo acima, para permitir o reaproveitamento de código, salvamos as queries em arquivos externos e referenciamos estes durante o teste utilizando os comandos def & read. No exemplo, o arquivo com a query é o by-name.graphql:
+Como visto no exemplo acima, para permitir o reaproveitamento de código, salvamos as queries em arquivos externos e referenciamos estes durante o teste utilizando os comandos def & read. No exemplo, o arquivo com a query é o pokemon-and-attacks-by-name.graphql:
 
 ```
 query PokemonAndAttacks($name: String) {
