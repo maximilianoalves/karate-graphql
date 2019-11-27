@@ -8,7 +8,7 @@ Background:
   * def PokemonFaker = Java.type('pokeapi.java.PokemonFaker')
 
 
-  @pokemon @pokemon_internal_query_pikachu
+  @pokemon @pokemon_internal_query_pikachu @pokemon_tdc
   Scenario: Validar o pokemon Pikachu - Query interna
     Given text query =
     """
@@ -29,8 +29,31 @@ Background:
     """
     And request { query: '#(query)' }
     When method post
+    * print response
     Then status 200
     And match $.data.pokemon.name == "Pikachu"
+
+    # O karate possibilita a escrita de assercoes mais completas em uma linha, como:
+
+    #validar o contrato de partes especificas do request, mesmo que sejam listas.
+    * def special_contract = { "name": "#string", "type": "#string", "damage": "#number" }
+    * def discharge = { "name": "Discharge", "type": "Electric", "damage": 35 }
+    And match each $.data.pokemon.attacks.special == special_contract
+    #ou
+    And match $.data.pokemon.attacks.special == '#[] special_contract'
+
+    #validar que um determinado conteudo existe em alguma lista do payload, sem precisar iterar.
+    And match $.data.pokemon.attacks.special contains discharge
+
+    #validar o conteudo de alguma posicao especifica de listas.
+    * def payload_special_discharge = get[0] $..special[0]
+    And match payload_special_discharge == discharge
+
+    #Referenciar valores de variaveis durante a assercao, para facilitar.
+    And match $.data.pokemon contains { name: "Pikachu", number: "025", attacks: { special: '#(^discharge)' }}
+
+    #Ignorar valores ou atributos quando necessário.
+    And match $.data.pokemon contains { name: "Pikachu", number: "#ignore" }
 
   @pokemon @pokemon_external_query_pikachu
   Scenario: Validar o pokemon Pikachu - Query externa
