@@ -55,7 +55,7 @@ No arquivo Pokemon.feature temos a implementação dos testes, assim como as dev
 
 ```
   Scenario Outline: Validar pokemon <pokemon_nome>
-    iven def query = read('classpath:pokeapi/queries/pokemon-and-attacks-by-name.graphql')
+    Given def query = read('classpath:pokeapi/queries/pokemon-and-attacks-by-name.graphql')
     And def variables = { name: '<pokemon_nome>' }
     And request { query: '#(query)', variables: '#(variables)' }
     When method post
